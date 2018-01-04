@@ -1,0 +1,9 @@
+target/
+build/
+.gradle/
+#Package Files
+*.jar
+!gradle-wrapper.jar
+Main.java
+/.idea
+/out
