@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/ItinoseSan/openWeatherMap4j.svg?branch=master)](https://travis-ci.org/ItinoseSan/openWeatherMap4j)
 # OpenWeatherMap4j
 Java API wrapper of openweathermap.org which is released under the MIT Licence
 # Usage
