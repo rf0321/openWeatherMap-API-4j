@@ -1,28 +1,23 @@
 package openweathermap4j;
 
-import openweathermap4j.http.HttpRequest;
+import openweathermap4j.url.ApiUrlBuilder;
+
 
 public class OpenWeatherMap4j{
 
-    private String api_key;
+    private String apiKey;
 
     // private String country;
 
-    public OpenWeatherMap4j(String api_key){
-        this.api_key = api_key;
+    public OpenWeatherMap4j(String apiKey){
+        this.apiKey = apiKey;
     }
 
     public String getCurrentWeather(String location){
-
-        HttpRequest httpRequest = new HttpRequest(api_key);
-
-        return httpRequest.urlBuilderForCurrent(location);
+        return ApiUrlBuilder.buildURL(location, "weather", apiKey);
     }
 
     public String getWeatherForeCast(String location) {
-
-        HttpRequest httpRequest = new HttpRequest(api_key);
-
-        return httpRequest.urlBuilderForForCast(location);
+        return ApiUrlBuilder.buildURL(location, "forecast", apiKey);
     }
 }

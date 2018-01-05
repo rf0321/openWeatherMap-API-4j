@@ -1,7 +1,5 @@
 package openweathermap4j.http;
 
-import openweathermap4j.url.OpenWeatherMapApiUrl;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -9,29 +7,9 @@ import java.net.URL;
 
 public class HttpRequest {
     /* Http Request Method */
-    private static String GET = "GET";
+    private static final String GET = "GET";
 
-    private String api_key;
-
-    public HttpRequest(String api_key){
-        this.api_key = api_key;
-    }
-
-    public String urlBuilderForCurrent(String location) {
-
-        String buildUrlForApi = OpenWeatherMapApiUrl.END_POINT + "weather?q=" + location + "&appid=" + api_key;
-
-        return httpRequestSender(buildUrlForApi);
-    }
-
-    public String urlBuilderForForCast(String location){
-
-        String buildUrlForApi = OpenWeatherMapApiUrl.END_POINT + "forecast?q=" +location+ "&appid="+ api_key;
-
-        return httpRequestSender(buildUrlForApi);
-    }
-
-    private static String httpRequestSender(String url) {
+    public static String httpRequestSender(String url) {
 
         try {
             URL requesturl = new URL(url);
