@@ -18,5 +18,5 @@ openWeatherMap4j.getWeatherForeCast("London");
 Parse or dont parse, I got lost about this.But I thought that black value to user is not good. So I didnt parse.
 # Contributing
 Im waiting your contributing.
-# Location
+# Location of the Weather
 Im using openweathermap.org reference about location.
